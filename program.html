@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Python Programming — Easy Coding</title>
-<meta name="description" content="Learn Python programming: definitions and 60 important programs with source code, output and explanations.">
+<title>Python Program — Easy Coding</title>
+<meta name="description" content="Python program with full source code, sample output, and a plain-language explanation.">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -25,26 +25,13 @@
 </header>
 
 <main class="wrap">
-  <section class="dash-hero py">
-    <span class="lang-tag">● Python Programming</span>
-    <h1>Python Programming</h1>
-    <p class="lede">Python is a high-level, interpreted language known for clean, readable syntax. It's one of the most beginner-friendly languages to start with, and also one of the most widely used in the real world — from web apps to data science and automation.</p>
-  </section>
-
-  <div class="dash-grid">
-    <a href="definitions.html" class="dash-card">
-      <span class="count">54 CONCEPTS</span>
-      <h3>Definitions</h3>
-      <p>Learn important Python concepts and definitions with simple explanations and examples.</p>
-      <span class="cta">Explore Definitions</span>
-    </a>
-    <a href="programs.html" class="dash-card">
-      <span class="count">60 PROGRAMS</span>
-      <h3>Important Programs</h3>
-      <p>Practice important Python programs with source code, output and explanations.</p>
-      <span class="cta">Explore Programs</span>
-    </a>
+  <div class="detail-header" style="flex-direction:column;">
+    <div class="breadcrumb" id="breadcrumb"></div>
+    <div id="detail-title-wrap" style="display:flex; align-items:flex-start; gap:16px;"></div>
   </div>
+
+  <div id="detail-body"></div>
+  <div class="detail-nav" id="detail-nav"></div>
 </main>
 
 <footer class="site-footer">
@@ -84,6 +71,10 @@
 <script src="../assets/js/data-c-programs.js"></script>
 <script src="../assets/js/data-python-programs.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../assets/js/render-program-detail.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  renderProgramDetail(window.PYTHON_PROGRAMS, 'python', 'Python Programming');
+</script>
 </body>
 </html>

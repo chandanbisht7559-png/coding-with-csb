@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Python Programming — Easy Coding</title>
-<meta name="description" content="Learn Python programming: definitions and 60 important programs with source code, output and explanations.">
+<title>Python Programming Definitions — Easy Coding</title>
+<meta name="description" content="54 essential Python programming definitions: variables, data types, operators, loops, functions, classes and more.">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -24,27 +24,18 @@
   </div>
 </header>
 
-<main class="wrap">
-  <section class="dash-hero py">
-    <span class="lang-tag">● Python Programming</span>
-    <h1>Python Programming</h1>
-    <p class="lede">Python is a high-level, interpreted language known for clean, readable syntax. It's one of the most beginner-friendly languages to start with, and also one of the most widely used in the real world — from web apps to data science and automation.</p>
-  </section>
+<main class="wrap definitions-page">
+  <a href="index.html" class="back-link" style="margin-top:32px;">← Back to Python Programming</a>
+  <span class="pill py">PYTHON PROGRAMMING</span>
+  <h1 style="margin-top:14px;">Definitions</h1>
+  <p class="lede">Every core Python concept, explained simply — with syntax and examples where useful. Tap a topic to expand it.</p>
 
-  <div class="dash-grid">
-    <a href="definitions.html" class="dash-card">
-      <span class="count">54 CONCEPTS</span>
-      <h3>Definitions</h3>
-      <p>Learn important Python concepts and definitions with simple explanations and examples.</p>
-      <span class="cta">Explore Definitions</span>
-    </a>
-    <a href="programs.html" class="dash-card">
-      <span class="count">60 PROGRAMS</span>
-      <h3>Important Programs</h3>
-      <p>Practice important Python programs with source code, output and explanations.</p>
-      <span class="cta">Explore Programs</span>
-    </a>
+  <div class="toolbar">
+    <input type="search" id="toolbar-search" placeholder="Search definitions, e.g. 'dictionary', 'class', 'loop'…">
+    <span class="result-count" id="result-count"></span>
   </div>
+
+  <div class="accordion" id="accordion"></div>
 </main>
 
 <footer class="site-footer">
@@ -84,6 +75,10 @@
 <script src="../assets/js/data-c-programs.js"></script>
 <script src="../assets/js/data-python-programs.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../assets/js/render-definitions.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  renderDefinitions(window.PYTHON_DEFINITIONS, 'python');
+</script>
 </body>
 </html>
