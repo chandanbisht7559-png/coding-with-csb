@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Python Program — Easy Coding</title>
-<meta name="description" content="Python program with full source code, sample output, and a plain-language explanation.">
+<title>C Program — Easy Coding</title>
+<meta name="description" content="C program with full source code, sample output, and a plain-language explanation.">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="lang-c">
 
 <header class="site-header">
   <div class="wrap bar">
     <a href="../index.html" class="brand"><span class="mark"></span>Easy Coding</a>
     <nav class="main-nav">
       <a href="../index.html">Home</a>
-      <a href="../c/index.html">C Programming</a>
-      <a href="index.html" class="active">Python Programming</a>
+      <a href="index.html" class="active">C Programming</a>
+      <a href="../python/index.html">Python Programming</a>
     </nav>
     <div class="header-actions">
       <button class="search-trigger" aria-label="Search">🔍 <span class="hint">Search</span> <kbd>Ctrl K</kbd></button>
@@ -43,15 +43,15 @@
       </div>
       <div>
         <h4>Languages</h4>
-        <ul><li><a href="../c/index.html">C Programming</a></li><li><a href="index.html">Python Programming</a></li></ul>
+        <ul><li><a href="index.html">C Programming</a></li><li><a href="../python/index.html">Python Programming</a></li></ul>
       </div>
       <div>
         <h4>Browse</h4>
         <ul>
-          <li><a href="../c/definitions.html">C Definitions</a></li>
-          <li><a href="../c/programs.html">C Programs</a></li>
-          <li><a href="definitions.html">Python Definitions</a></li>
-          <li><a href="programs.html">Python Programs</a></li>
+          <li><a href="definitions.html">C Definitions</a></li>
+          <li><a href="programs.html">C Programs</a></li>
+          <li><a href="../python/definitions.html">Python Definitions</a></li>
+          <li><a href="../python/programs.html">Python Programs</a></li>
         </ul>
       </div>
     </div>
@@ -74,7 +74,22 @@
 <script src="../assets/js/render-program-detail.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  renderProgramDetail(window.PYTHON_PROGRAMS, 'python', 'Python Programming');
+  renderProgramDetail(window.C_PROGRAMS, 'c', 'C Programming');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css">
+<script>
+  // Highlight the C code once the program detail is rendered
+  try {
+    document.addEventListener('DOMContentLoaded', () => {
+      // small timeout to ensure renderProgramDetail finished
+      setTimeout(() => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          if (typeof hljs !== 'undefined') hljs.highlightElement(block);
+        });
+      }, 30);
+    });
+  } catch (e) { /* ignore highlighting errors */ }
 </script>
 </body>
 </html>
